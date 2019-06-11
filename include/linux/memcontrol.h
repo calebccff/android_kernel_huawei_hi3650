@@ -147,7 +147,7 @@ static inline void mem_cgroup_oom_disable(void)
 
 static inline bool task_in_memcg_oom(struct task_struct *p)
 {
-	return p->memcg_oom.memcg;
+	return p->memcg_oom.memcg>0;
 }
 
 bool mem_cgroup_oom_synchronize(bool wait);
